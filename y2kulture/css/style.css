@@ -1,0 +1,261 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3";
+    min-width: 400px; /*or 480 px?*/
+}
+
+/*=== Typography ====*/
+
+.logo{
+    width: 100px;
+    margin: 0px;
+}
+
+.source-sans-3 {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: #141414 1px -2px 10px;
+}
+
+h2{
+    margin: .5rem 0;
+    font-size: 1.5rem;
+    color: #141414;
+}
+
+p {
+    color: #505050;
+    margin: 0px;
+    line-height: 1.4;
+    padding: .5em 0;
+}
+
+.date{
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    color:white;
+    text-shadow: black 2px 2px 20px;
+}
+
+footer p{
+    color: #ECECEC;
+}
+
+.date, nav li{
+    text-transform: uppercase;
+    font-weight: bold;   
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: orangered;
+}
+
+/*=== Layout ====*/
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    border-radius:5px;
+}
+
+/*=== Navigation ====*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: .33em 0;
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+    font-size: .75rem;
+    padding-left: 2em;
+}
+
+/*=== Main Sections ====*/
+
+/* hero-section */
+    
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    color: white;
+    width:100%;
+    height: 280px;
+    background-image: url('/images/masterclass.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero h1, .hero p{
+    max-width: 670px;
+}
+
+.hero-txt-wrapper{
+    padding: 1em 0;
+    margin-right: auto; 
+
+}
+
+    /* main-section-2 */
+.main-area{
+    width: 100%;
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.recent-post-item{
+    padding: 1em 0;
+}
+
+.main-area img{
+    border-radius: 5px;
+    height: 60vw;
+    object-fit:cover;
+    min-height: 200px;
+}
+.centered-txt, .view-more{
+    width: 100%;
+    text-align: center;
+}
+
+.feature-txt p{
+    margin: 1em 0;   
+}
+
+.view-more{
+    margin-bottom: 2em;
+    }
+
+.centered-txt button, .view-more button{
+    margin-top: 2em;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.centered-txt button:hover, .view-more button:hover{
+    color: orangered;
+}
+
+.centered-txt button{
+    text-decoration: none;
+}
+
+    /* Footer */
+    
+footer{
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+}
+
+/*=== Recent posts ====*/
+
+/*=== Feature page ====*/
+.feature-main{
+    padding: 2em 0;
+}
+.feature-txt{
+    padding: 1em 0;
+}
+
+/*=== About Me page ====*/
+
+.avatar{
+    border-radius: 50%;
+    width: 250px;
+    height: auto;
+}
+
+.about-me{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+/*=== Media Queries ====*/
+
+@media (min-width: 960px) {
+    /* STYLES HERE */
+    .hero{
+        height: 450px;
+    }
+    .hero-txt-wrapper{
+        padding: 3em;
+    }
+    .main-area{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    }
+    
+    .main-area img{
+    height: 240px;
+    }
+    
+    .about-me{
+    flex-direction: row;
+    gap: 2em;
+}
+}
+
+@media (max-width: 480px) {
+    .logo{
+        width: 150px;
+    }
+    nav{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav li{
+        display: block;
+        list-style: none;
+        font-size: .75rem;
+        padding: 1.3em 0;
+        border-bottom: lightgray solid 1px;
+    }
+    nav li:last-child { 
+        border-bottom: none;
+    }
+    
+    nav ul{
+        width: 60%;
+        text-align: center;
+        padding: 0
+    }
+    nav ul, nav li{
+        margin: 0;
+    }
+    .about-me{
+       justify-content: center;
+       align-items: center;
+    }   
+}
